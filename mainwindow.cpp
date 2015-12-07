@@ -17,25 +17,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent),ui(new Ui::MainWin
     //Connect timer signal
     connect(subtitleTimer,SIGNAL(timeout()),this, SLOT(timerOntimesignal()));
     //==========================================================
-    //TESTING ADJUSTMENTS
-//    player->setMedia(QUrl::fromLocalFile("/home/igormacedo/Downloads/The.Big.Bang.Theory.S09E03.720p.HDTV.X264-DIMENSION[rarbg]/The.Big.Bang.Theory.S09E03.720p.HDTV.X264-DIMENSION.mkv"));
-
-//    //============================
-
-//    mysubs = getsubtitles("/home/igormacedo/Downloads/The.Big.Bang.Theory.S09E03.720p.HDTV.X264-DIMENSION[rarbg]/The.Big.Bang.Theory.S09E03.720p.HDTV.X264-DIMENSION.srt");
-
-
-//    int c = 0;
-
-//    for (list<subtitle*>::iterator it=mysubs.begin(); it != mysubs.end(); ++it)
-//    {
-//        cout << "timebegin: " << (*it)->timerange.timeBegin << endl;
-//        cout << "timeend: " << (*it)->timerange.timeEnd << endl;
-//        cout << "first word: " << (*it)->firstline[0].at(0).toStdString() << endl;
-
-//        if(c==10)break;
-//        c++;
-//    }
 
 }
 
