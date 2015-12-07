@@ -57,6 +57,7 @@ void MainWindow::designMainWindow()
     connect(stopButton, SIGNAL(clicked(bool)), this, SLOT(stopButtonClicked()));
 
     progressSlider = new QSlider(Qt::Horizontal);
+    connect(progressSlider, SIGNAL(sliderMoved(int)),this, SLOT(onSliderMove(int)));
     progressSlider->setTracking(false);
     //connect(progressSlider, SIGNAL(valueChanged(int)), this, SLOT()
 
@@ -79,6 +80,18 @@ void MainWindow::designMainWindow()
     layout->addLayout(ButtonsLayout);
 
     centralWidget->setLayout(layout);
+}
+
+void MainWindow::onSliderMove(int position){
+    if(position > player->position())
+    {
+        player->setPosition(position);
+    }
+    else
+    {
+         mysubs = getsubtitles(subtitleName.toStdString());
+         player->setPosition(position);
+    }
 }
 
 void MainWindow::metaDataChanged(QString key, QVariant value)

@@ -79,6 +79,7 @@ private slots:
     void timerOntimesignal();
     void subtitleButtonClicked();
     void openFileAction();
+    void onSliderMove(int);
 
 
 /// ESSAS FUNCǑES E OBJETOS DEVERIAM SER PRIVATE, POREM PARA FINS DE DOCUMENTACAO SERAO
